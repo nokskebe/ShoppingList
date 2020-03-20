@@ -1,0 +1,39 @@
+{
+    "name": "shoppinglist",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "client-install": "npm install --prefix client",
+        "start": "node server.js",
+        "server": "nodemon server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run client\" \"npm run server\"  ",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/nokskebe/ShoppingList.git"
+    },
+    "keywords": [
+        "nok2237131718"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nokskebe/ShoppingList/issues"
+    },
+    "homepage": "https://github.com/nokskebe/ShoppingList#readme",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "concurrently": "^5.1.0",
+        "config": "^3.3.0",
+        "create-react-app": "^3.4.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.9.4"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    }
+}

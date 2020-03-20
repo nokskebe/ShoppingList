@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb://tecmovenok:Te123789@3.0.51.142:27017/nok-db",
+    "jwtSecret": "sl_myJwtSecret"
+}
