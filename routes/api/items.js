@@ -25,6 +25,19 @@ router.post('/' , auth, (req,res) => {
 
 });
 
+// @router  POST api/items
+// @desc    Create An Item
+// @access  Private
+// router.put('/:id' , auth, (req,res) => {
+//     const payload = req.body
+//     const { items } = req.params
+  
+//     const item = Product.findByIdAndUpdate(id, { $set: payload })
+//     res.json(product)
+
+// });
+
+
 // @router  DELETE api/items/:id
 // @desc    Delete A Item
 // @access  Private

@@ -41,7 +41,7 @@ export class ShoppingList extends Component {
                                         onClick={this.onDeleteClick.bind(this,_id)}
                                     >&times;
                                     </Button> : null}
-                                    
+                                    <Button className="edit-btn" color="warning" size="md" onclick={this.onEditClick.bind(this,_id)}>Edit</Button>
                                     {name}
                                 </ListGroupItem>
                             </CSSTransition>
