@@ -19,6 +19,13 @@ export class ShoppingList extends Component {
         this.props.deleteItem(id);
     }
 
+    componentDidUpdate(prevProps){
+        if(this.props.name != prevProps.name){
+            this.fetchData(this.props.name);
+        }
+    }
+
+
     render() {
         
         const { items } = this.props.item;
@@ -41,7 +48,7 @@ export class ShoppingList extends Component {
                                         onClick={this.onDeleteClick.bind(this,_id)}
                                     >&times;
                                     </Button> : null}
-                                    <Button className="edit-btn" color="warning" size="md" onclick={this.onEditClick.bind(this,_id)}>Edit</Button>
+                                    <Button className="edit-btn" color="warning" size="md" onclick={this.onEditClick.bind(this._id)}>Edit</Button>
                                     {name}
                                 </ListGroupItem>
                             </CSSTransition>
